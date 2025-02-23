@@ -2,7 +2,7 @@ on:
   push:
     branches:
       - main
-name: Deploy Service Lancamento on push 
+name: Deploy Service Consolidado on push 
 jobs:
   web-deploy:
     name: main
@@ -21,13 +21,5 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
 
-    - name: Publish
-      run: dotnet publish src/Service.Financeiro.Lancamento.Presentation/Service.Financeiro.Lancamento.Presentation.Api.csproj -c Release /p:EnvironmentName=Production --output ./publish 
-  
-    - name: Deploy to PRD
-      uses: jahbenjah/SmarterASP.NET-web-deploy@1.0.0.alpha.8
-      with:
-        website-name: fernandogouvea-002-site5
-        server-computer-name: https://win0000.site1now.net:0000
-        server-username: fernandogouvea0000
-        server-password: QQ1234567
+    - name: Run Tests
+      run: dotnet test --no-build --configuration Release --collect:"XPlat Code Coverage"

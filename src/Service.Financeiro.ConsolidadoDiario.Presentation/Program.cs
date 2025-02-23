@@ -1,6 +1,8 @@
+using AutoMapper;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
-using Service.Financeiro.ConsolidadoDiario.Application.Applications.v1.ConsolidarLancamento;
+using Service.Financeiro.ConsolidadoDiario.Application.Profiles;
+using Service.Financeiro.ConsolidadoDiario.Application.Query.v1.BuscarConsolidado;
 using Service.Financeiro.ConsolidadoDiario.Persistence.Cache;
 using Service.Financeiro.ConsolidadoDiario.Persistence.Context;
 using Service.Financeiro.ConsolidadoDiario.Persistence.Repository;
@@ -16,7 +18,16 @@ builder.Services.AddScoped<IConsolidadoRepository, ConsolidadoRepository>();
 
 builder.Services.AddMediatR(cfg =>
 {
-    cfg.RegisterServicesFromAssembly(typeof(ConsolidarLancamentoCommandHandler).Assembly);
+    cfg.RegisterServicesFromAssembly(typeof(BuscarConsolidadoQueryHandler).Assembly);
+});
+
+builder.Services.AddSingleton<IMapper>(sp =>
+{
+    var config = new MapperConfiguration(cfg =>
+    {
+        cfg.AddProfile(new ApplicationProfile());
+    });
+    return config.CreateMapper();
 });
 
 builder.Services.AddMassTransit(x =>
