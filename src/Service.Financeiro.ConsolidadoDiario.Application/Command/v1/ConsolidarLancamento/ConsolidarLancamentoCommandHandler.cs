@@ -4,7 +4,7 @@ using Service.Financeiro.ConsolidadoDiario.Domain.Enuns;
 using Service.Financeiro.ConsolidadoDiario.Persistence.Cache;
 using Service.Financeiro.ConsolidadoDiario.Persistence.Repository;
 
-namespace Service.Financeiro.ConsolidadoDiario.Application.Applications.v1.ConsolidarLancamento
+namespace Service.Financeiro.ConsolidadoDiario.Application.Command.v1.ConsolidarLancamento
 {
     public class ConsolidarLancamentoCommandHandler(IRedisService _redisService,
                                                     IConsolidadoRepository _consolidadoRepository) : IRequestHandler<ConsolidarLancamentoCommand, Unit>

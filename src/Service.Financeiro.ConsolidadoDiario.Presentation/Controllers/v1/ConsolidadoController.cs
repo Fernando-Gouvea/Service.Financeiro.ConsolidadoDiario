@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Service.Financeiro.ConsolidadoDiario.Application.Query.v1.BuscarConsolidado;
 
 namespace Service.Financeiro.ConsolidadoDiario.Presentation.Api.Controllers.v1
 {
@@ -7,12 +8,12 @@ namespace Service.Financeiro.ConsolidadoDiario.Presentation.Api.Controllers.v1
     [ApiController]
     public class ConsolidadoController(IMediator _mediator) : ControllerBase
     {
-        [HttpGet("[action]/{date}")]
-        public async Task<IActionResult> BuscarConlidadoAsync(DateTime date)
+        [HttpGet("[action]/{data}")]
+        public async Task<IActionResult> BuscarConsolidadoAsync(DateTime data)
         {
-           // var result = await _mediator.Send();
+            var result = await _mediator.Send(new BuscarConsolidadoQuery { Data = data });
 
-            return Ok();
+            return Ok(result);
         }
     }
 }

@@ -12,8 +12,4 @@
     <ProjectReference Include="..\Service.Financeiro.ConsolidadoDiario.Persistence\Service.Financeiro.ConsolidadoDiario.Persistence.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Query\" />
-  </ItemGroup>
-
 </Project>

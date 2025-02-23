@@ -1,7 +1,7 @@
 ﻿using MassTransit;
 using MediatR;
-using Service.Financeiro.ConsolidadoDiario.Application.Applications.v1.ConsolidarLancamento;
-using Service.Financeiro.Lancamento.Infrastructure.Events;
+using Service.Financeiro.ConsolidadoDiario.Application.Command.v1.ConsolidarLancamento;
+using Service.Financeiro.ConsolidadoDiario.Infrastructure.Events;
 
 namespace Service.Financeiro.ConsolidadoDiario.Presentation.Api.Queues
 {

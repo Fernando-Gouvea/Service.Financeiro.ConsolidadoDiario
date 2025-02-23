@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Service.Financeiro.ConsolidadoDiario.Domain.Enuns;
 
-namespace Service.Financeiro.ConsolidadoDiario.Application.Applications.v1.ConsolidarLancamento
+namespace Service.Financeiro.ConsolidadoDiario.Application.Command.v1.ConsolidarLancamento
 {
     public class ConsolidarLancamentoCommand : IRequest<Unit>
     {
