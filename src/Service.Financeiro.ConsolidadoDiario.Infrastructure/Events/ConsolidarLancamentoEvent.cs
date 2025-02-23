@@ -1,6 +1,6 @@
 ﻿using Service.Financeiro.ConsolidadoDiario.Domain.Enuns;
 
-namespace Service.Financeiro.ConsolidadoDiario.Infrastructure.Events
+namespace Service.Financeiro.Lancamento.Infrastructure.Events
 {
     public class ConsolidarLancamentoEvent
     {

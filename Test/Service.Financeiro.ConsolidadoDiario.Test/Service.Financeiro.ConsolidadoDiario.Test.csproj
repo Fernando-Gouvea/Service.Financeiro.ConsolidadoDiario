@@ -26,6 +26,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\Service.Financeiro.ConsolidadoDiario.Application\Service.Financeiro.ConsolidadoDiario.Application.csproj" />
+    <ProjectReference Include="..\..\src\Service.Financeiro.ConsolidadoDiario.Persistence\Service.Financeiro.ConsolidadoDiario.Persistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Using Include="NUnit.Framework" />
   </ItemGroup>
 
