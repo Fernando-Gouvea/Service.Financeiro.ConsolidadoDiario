@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Service.Financeiro.ConsolidadoDiario.Domain\Service.Financeiro.ConsolidadoDiario.Domain.csproj" />
+    <ProjectReference Include="..\Service.Financeiro.ConsolidadoDiario.Infrastructure\Service.Financeiro.ConsolidadoDiario.Infrastructure.csproj" />
+    <ProjectReference Include="..\Service.Financeiro.ConsolidadoDiario.Persistence\Service.Financeiro.ConsolidadoDiario.Persistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Query\" />
+  </ItemGroup>
+
+</Project>
