@@ -60,7 +60,7 @@ Neste exemplo:
 
 
 ## Observações:
-- A aplicação está configurada para rodar localmente em **https://localhost:7060**.   
+- A aplicação está configurada para rodar localmente em **https://localhost:7061**.   
 - Para testar o endpoint, você pode utilizar ferramentas como **Postman** ou **Insomnia**, além do comando `curl` fornecido.  
 
 ---
@@ -100,3 +100,7 @@ Neste exemplo:
    ```
 
 ---
+
+## Melhorias:
+- Implementação de um SDK para que itens em comuns usados nos MSs sejam centralizados, podendo ser instalados via pacote Nuget.   
+
